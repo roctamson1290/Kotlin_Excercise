@@ -1,0 +1,60 @@
+import java.util.Scanner
+
+fun main(args: Array<String>) { 
+repeat(4){
+    val reader = Scanner(System.`in`)
+    val name1 = "Jhim" 
+    val name2 = "Ethan" 
+    val name3 = "Sally" 
+    val name4 = "Joy" 
+    
+    println("[1] $name1") 
+    println("[2] $name2") 
+    println("[3] $name3") 
+    println("[4] $name4")
+
+    println("Enter choice:")
+    val  choice:Int = reader.nextInt()
+    println("Enter age of pet:")
+    val age:Int = reader.nextInt()
+
+    if(choice == 1 || choice == 2){
+      var name:String = "$name1,  $name2"
+
+      var result = if(age >= 5 && age <= 10){
+        "Hamster, Dog"
+      }else if(age >= 11 && age <= 15){
+        "Spider, Dog"
+      }else if(age >= 16 && age <= 20){
+        "Dog, Snake"
+      }else{
+        "No pets, Not interested"
+      }
+
+      println("")
+      println("Name: $name")
+      println("Age: $age")
+      println("Pet: $result")
+      println("")
+    }
+    else{
+      var name:String = "$name3, $name4"
+
+      var result = if(age >= 5 && age <= 10){
+        "Hamster, Cat"
+      }else if(age >= 11 && age <= 15){
+        "Rabbit, Cat"
+      }else if(age >= 16 && age <= 20){
+        "Cat"
+      }else{
+        "No pets, Not interested"
+      }
+
+      println("")
+      println("Name: $name")
+      println("Age: $age")
+      println("Pet: $result")
+      println("")
+    }
+  }
+}
